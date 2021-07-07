@@ -1,19 +1,40 @@
 <template>
-  <ion-app>
-    <ion-router-outlet />
-  </ion-app>
+<ion-page>
+  <!-- <ion-app> -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-searchbar placeholder="search hymn"></ion-searchbar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+    <ButtonTab />
+    <OpenHymn />
+  </ion-content>
+
+</ion-page>
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
-import { defineComponent } from 'vue';
-
-
-export default defineComponent({
+import ButtonTab from './component/ButtonTab.vue'
+import OpenHymn from './component/OpenHymn.vue'
+import { IonHeader, IonToolbar, IonPage, IonSearchbar} from '@ionic/vue'
+export default {
   name: 'App',
   components: {
-    IonApp,
-    IonRouterOutlet
+
+    IonHeader,
+    IonToolbar,
+    ButtonTab,
+    OpenHymn,
+    IonPage,
+    IonSearchbar
   }
-});
+
+
+}
 </script>
+
+<style>
+
+</style>
